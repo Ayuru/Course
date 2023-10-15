@@ -33,14 +33,15 @@ public class CollectionTestSuite {
 
     @Test
     void testOddNumbersExterminatorEmptyList() {
-
+        //Given
         List<Integer> list = new ArrayList<>();
-
         List<Integer> expectedResult = new ArrayList<>();
-
         OddNumbersExterminator exterminator = new OddNumbersExterminator();
+
+        //When
         List<Integer> result = exterminator.exterminate(list);
 
+        //Then
         Assertions.assertEquals(expectedResult, result);
 
     }
@@ -49,17 +50,17 @@ public class CollectionTestSuite {
 
     @Test
     void testOddNumbersExterminatorNormalList() {
-
+        //Given
         Integer[] listArray = new Integer[]{3, 6, 7, 21, 66};
         Integer[] resultArray = new Integer[]{6, 66};
         List<Integer> list = new ArrayList<>(Arrays.asList(listArray));
-
         List<Integer> expectedResult = new ArrayList<>(Arrays.asList(resultArray));
-
-
         OddNumbersExterminator exterminator = new OddNumbersExterminator();
+
+        //When
         List<Integer> result = exterminator.exterminate(list);
 
+        //Then
         Assertions.assertEquals(expectedResult, result);
 
     }
