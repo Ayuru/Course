@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
@@ -89,4 +90,24 @@ class BookDirectoryTestSuite {
         assertEquals(0, theListOfBooks10.size());                                     // [5]
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());    // [6]
     }
+
+    @Test
+    void testListBooksInHandsOfNoBooks() {
+        assertTrue(false);
+
+    }
+
+    @Test
+    void testListBooksInHandsOfOneBook() {
+        assertTrue(false);
+
+    }
+
+    @Test
+    void testListBooksInHandsOfFiveBooks() {
+        assertTrue(false);
+
+    }
+
+
 }
