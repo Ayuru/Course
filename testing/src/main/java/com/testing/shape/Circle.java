@@ -1,6 +1,13 @@
 package com.testing.shape;
 
 public class Circle implements Shape {
+
+    private int field;
+
+    public Circle(int field) {
+        this.field = field;
+    }
+
     @Override
     public String getShapeName() {
         return "Circle";
@@ -8,6 +15,6 @@ public class Circle implements Shape {
 
     @Override
     public int getField() {
-        return 20;
+        return field;
     }
 }
