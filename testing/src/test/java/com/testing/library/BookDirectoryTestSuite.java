@@ -93,19 +93,38 @@ class BookDirectoryTestSuite {
 
     @Test
     void testListBooksInHandsOfNoBooks() {
-        assertTrue(false);
+        // Given
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+        LibraryUser user = new LibraryUser("Baylan ", "Skoll", "66074");
+        // When
+        List<Book> booksInHandsOf = bookLibrary.listBooksInHandsOf(user);
+        // Then
+        assertEquals(0, booksInHandsOf.size());
 
     }
 
     @Test
     void testListBooksInHandsOfOneBook() {
-        assertTrue(false);
+        // Given
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+        LibraryUser user = new LibraryUser("Shin", "Hati", "11074");
+        // When
+        List<Book> booksInHandsOf = bookLibrary.listBooksInHandsOf(user);
+        // Then
+        assertEquals(1, booksInHandsOf.size());
 
     }
 
     @Test
     void testListBooksInHandsOfFiveBooks() {
-        assertTrue(false);
+        // Given
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+        LibraryUser user = new LibraryUser("Marrok", "---", "10001");
+        List<Book> resultListOf5Books = generateListOfNBooks(5);
+        // When
+        List<Book> booksInHandsOf = bookLibrary.listBooksInHandsOf(user);
+        // Then
+        assertEquals(5, booksInHandsOf.size());
 
     }
 

@@ -2,10 +2,14 @@ package com.testing.shape;
 
 public class Triangle implements Shape {
 
-    private int field;
+    private double base;
+    private double height;
+    private double field = 0.5 * base * height;
 
-    public Triangle(int field) {
-        this.field = field;
+    public Triangle(double base, double height) {
+
+        this.base = base;
+        this.height = height;
     }
 
     @Override
@@ -14,7 +18,7 @@ public class Triangle implements Shape {
     }
 
     @Override
-    public int getField() {
+    public double getField() {
         return field;
     }
 }

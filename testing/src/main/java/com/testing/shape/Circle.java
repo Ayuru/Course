@@ -2,10 +2,11 @@ package com.testing.shape;
 
 public class Circle implements Shape {
 
-    private int field;
+    private double radius;
+    private double field = Math.PI * Math.pow(radius, 2);
 
-    public Circle(int field) {
-        this.field = field;
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
     @Override
@@ -14,7 +15,7 @@ public class Circle implements Shape {
     }
 
     @Override
-    public int getField() {
+    public double getField() {
         return field;
     }
 }

@@ -2,10 +2,11 @@ package com.testing.shape;
 
 public class Square implements Shape {
 
-    private int field;
+    private double side;
+    private double field = Math.pow(side, 2);
 
-    public Square(int field) {
-        this.field = field;
+    public Square(double side) {
+        this.side = side;
     }
 
     @Override
@@ -14,7 +15,7 @@ public class Square implements Shape {
     }
 
     @Override
-    public int getField() {
+    public double getField() {
         return field;
     }
 }
