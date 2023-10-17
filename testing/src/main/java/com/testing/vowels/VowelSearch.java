@@ -18,19 +18,19 @@ public class VowelSearch {
 class Searcher {
 
     public String search(String string) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         char[] vowels = {'a', 'e', 'i', 'o', 'u', 'y'};
 
         for (int i = 0; i < string.length(); i++) {
             for (int j = 0; j < vowels.length; j++) {
                 if (string.charAt(i) == vowels[j] || string.charAt(i) == toUpperCase(vowels[j])) {
-                    result = result + string.charAt(i);
+                    result.append(string.charAt(i));
                 }
             }
 
         }
 
-        return result;
+        return result.toString();
     }
 
 }
