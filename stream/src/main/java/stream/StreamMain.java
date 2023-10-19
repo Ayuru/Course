@@ -39,7 +39,7 @@ public class StreamMain {
 
         // 7.1
         PoemBeautifier beautifier = new PoemBeautifier();
-        beautifier.beautify("Cute meowing baby Kittens. ", (text) -> "^_^ "+ text + "<3");
+        beautifier.beautify("Cute meowing baby Kittens. ", (text) -> "^_^ " + text + "<3");
         beautifier.beautify("Cute meowing baby Kittens. ", (text) -> text.toUpperCase());
         beautifier.beautify("Cute meowing baby Kittens. ", (text) -> text.repeat(3));
         beautifier.beautify("Cute meowing baby Kittens. ", (text) -> text + text.substring(18, 25) + "!");
@@ -67,8 +67,6 @@ public class StreamMain {
         theResultMapOfUsers.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
-
-
 
     }
 }
