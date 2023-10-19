@@ -1,7 +1,14 @@
 package stream;
 
 import stream.beautifier.PoemBeautifier;
+import stream.forumuser.Forum;
+
+import stream.forumuser.ForumUser;
 import stream.lambda.*;
+
+import java.time.LocalDate;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class StreamMain {
 
@@ -36,5 +43,32 @@ public class StreamMain {
         beautifier.beautify("Cute meowing baby Kittens. ", (text) -> text.toUpperCase());
         beautifier.beautify("Cute meowing baby Kittens. ", (text) -> text.repeat(3));
         beautifier.beautify("Cute meowing baby Kittens. ", (text) -> text + text.substring(18, 25) + "!");
+
+        // 7.3
+        System.out.println("Only males:");
+        Forum.getUserList().stream()
+                .filter(forumUser -> forumUser.getSex() == 'M')
+                .forEach(System.out::println);
+
+        System.out.println("\nOnly older than 20:");
+        Forum.getUserList().stream()
+                .filter(forumUser -> forumUser.getBirthDate().isBefore(LocalDate.now().minusYears(20)))
+                .forEach(System.out::println);
+
+        System.out.println("\nOnly with at least 1 post:");
+        Forum.getUserList().stream()
+                .filter(forumUser -> forumUser.getNumberOfPosts() > 0)
+                .forEach(System.out::println);
+
+        Map<Integer, ForumUser> theResultMapOfUsers = Forum.getUserList().stream()
+                .collect(Collectors.toMap(ForumUser::getId, forumUser -> forumUser));
+
+        System.out.println("\nMap elements: " + theResultMapOfUsers.size());
+        theResultMapOfUsers.entrySet().stream()
+                .map(entry -> entry.getKey() + ": " + entry.getValue())
+                .forEach(System.out::println);
+
+
+
     }
 }
