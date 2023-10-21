@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class WorldTestSuite {
 
     @Test
-    void testGtPeopleQuantity() {
+    void testGetPeopleQuantity() {
         //Given
         List<Country> countriesOfEurope = new ArrayList<>();
         countriesOfEurope.add(new Country("Poland", new BigDecimal(41026067)));
@@ -34,8 +34,7 @@ public class WorldTestSuite {
         BigDecimal worldPopulation = world.getPeopleQuantity();
 
         //Then
-        BigDecimal expectedPopulation = new BigDecimal(431892658);
-        assertEquals(worldPopulation, expectedPopulation);
+        assertEquals(worldPopulation, new BigDecimal(431892658));
 
     }
 }

@@ -1,5 +1,6 @@
 package stream;
 
+import extra.Mirror;
 import stream.beautifier.PoemBeautifier;
 import stream.forumuser.Forum;
 
@@ -67,6 +68,12 @@ public class StreamMain {
         theResultMapOfUsers.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
+
+
+        //Extra
+        Mirror mirror = new Mirror();
+        String text = String.valueOf(mirror.stringMirror("Geostigma"));
+        System.out.println(text);
 
     }
 }
