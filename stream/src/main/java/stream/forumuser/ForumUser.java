@@ -3,11 +3,11 @@ package stream.forumuser;
 import java.time.LocalDate;
 
 public class ForumUser {
-    int id;
-    String username;
-    char sex;
-    LocalDate birthDate;
-    int numberOfPosts;
+    private final int id;
+    private final String username;
+    private final char sex;
+    private final LocalDate birthDate;
+    private final int numberOfPosts;
 
     public ForumUser(int id, String username, char sex, LocalDate birthDate, int numberOfPosts) {
         this.id = id;
