@@ -13,6 +13,6 @@ public class ArrayOperationsTestSuite {
         //When
         double mean = ArrayOperations.getAverage(numbers);
         //Then
-        assertEquals(mean, 8.5);
+        assertEquals(8.5, mean);
     }
 }
