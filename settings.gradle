@@ -1,7 +1,8 @@
 rootProject.name = 'course'
 include 'testing'
 include 'stream'
-include 'testing:exception'
-findProject(':testing:exception')?.name = 'exception'
 include 'exception'
+include 'patterns'
+include 'spring-web'
+include 'spring'
 
