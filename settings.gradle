@@ -5,4 +5,5 @@ include 'exception'
 include 'patterns'
 include 'spring-web'
 include 'spring'
+include 'jdbc'
 
