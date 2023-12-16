@@ -76,7 +76,7 @@ class DbManagerTestSuite {
         String sqlQuery = "SELECT U.FIRSTNAME, U.LASTNAME\n" +
                 "FROM USERS U JOIN POSTS P ON U.ID = P.USER_ID\n" +
                 "GROUP BY P.USER_ID\n" +
-                "HAVING COUNT(*) >= 2";
+                "HAVING COUNT(*) > 1";
 
         Statement statement = dbManager.getConnection().createStatement();
         ResultSet rs = statement.executeQuery(sqlQuery);
