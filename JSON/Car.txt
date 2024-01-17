@@ -1,0 +1,25 @@
+{
+	"brand":"Cadillac",
+	"model":"Eldorado Convertible",
+	"chairs":[
+		{
+			"material":"leather",
+		 	"colour":"pink"
+		},
+		{
+			"material":"leather",
+		 	"colour":"pink"
+		},
+		{
+			"material":"leather",
+		 	"colour":"purple"
+		},
+		{
+			"material":"leather",
+		 	"colour":"purple"
+		},
+
+	],
+	"enginecapacity":8194
+}
+
