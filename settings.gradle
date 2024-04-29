@@ -7,4 +7,5 @@ include 'patterns'
 include 'spring-web'
 include 'spring'
 include 'jdbc'
+include 'testing2'
 
